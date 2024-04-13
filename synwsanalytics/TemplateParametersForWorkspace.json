@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synwsanalytics"
+		},
+		"ls_asql_adventureworkslt_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=atirajsvr.database.windows.net;Initial Catalog=AdventureWorks"
+		},
+		"synwsanalytics-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synwsanalytics.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"ls_adls_dataanalytics_properties_typeProperties_url": {
+			"value": "https://actdataingestion.dfs.core.windows.net/"
+		},
+		"synwsanalytics-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://actdataingestion.dfs.core.windows.net"
+		}
+	}
+}

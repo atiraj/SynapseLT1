@@ -1,0 +1,13 @@
+{
+	"name": "ds_asql_adventureworks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_asql_adventureworkslt",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

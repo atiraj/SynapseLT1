@@ -1,0 +1,30 @@
+{
+	"name": "ds_adls_adventureworks_sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_dataanalytics",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'yyyyMM')}/@{formatDateTime(utcnow(),'yyyyMMdd')}/@{concat(dataset().FileName,'_',formatDateTime(utcnow(),'yyyyMMdd'),'.parquet')}",
+					"type": "Expression"
+				},
+				"folderPath": "Demo/AWDB",
+				"fileSystem": "dlsfs"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

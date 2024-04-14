@@ -19,7 +19,7 @@
 					"value": "@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'yyyyMM')}/@{formatDateTime(utcnow(),'yyyyMMdd')}/@{concat(dataset().FileName,'_',formatDateTime(utcnow(),'yyyyMMdd'),'.parquet')}",
 					"type": "Expression"
 				},
-				"folderPath": "Demo/AWDB",
+				"folderPath": "Demo/AWDB1",
 				"fileSystem": "dlsfs"
 			},
 			"compressionCodec": "snappy"
